@@ -50,22 +50,67 @@ tr:nth-child(even) {
   color-scheme: dark;
 }
 
-.container {
-  padding: 25px;
-  height: 2000px;
+form{
+    border: #29292b;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 1.7;
+    
 }
+p {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 0px;
+}
+
 </style>
 <body>
 <img style="vertical-align: middle;" width="60px" src="portfoliopic.png">
 <b><text style="font-size: 40px; vertical-align: middle;">Henry C.</text></b><br>
 
 <h3>About Me</h3>
-<p>I'm Henry Cooper, a highschooler from Executive Garden Institute currently attending the Pre-IGCSE Course. 
-    <br>I'm a beginner Web Developer who's hoping to learn more over time!</p> 
+I'm Henry Cooper, a highschooler from Executive Garden Institute currently attending the Pre-IGCSE Course. 
+    <br>I'm a beginner Web Developer who's hoping to learn more over time!<br>
+
 <h3>Education</h3>
-<p><b>Executive Garden Indtitute</b> - Pre-IGCSE Batch 1</p>
-<p><b>Pride International School Myanmar</b> - Kindergarden - Year 9</p>
-<p><b>T&H Maths Center</b> - Grade 4 </p><br>
+<b>Executive Garden Indtitute</b> - Pre-IGCSE Batch 1<br>
+<b>Pride International School Myanmar</b> - Kindergarden - Year 9<br>
+<b>T&H Maths Center</b> - Grade 4 <br><br>
+
+<h4>Countdown to my Birthday</h4>
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Feb 11, 2024 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
 <h4>More Information</h4>
 <table class="center" >
     <tr>
@@ -108,7 +153,12 @@ tr:nth-child(even) {
     </tr>
  
 </table><br>
+
+
+
+<br>
 <footer><a href="https://github.com/HenryCpr"><img width="1.5%" src="https://cdn-icons-png.flaticon.com/512/733/733553.png"></a>             <a href="https://twitter.com/@henrywastakenn">
-    <img width="1.5%" src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a></footer>
+    <img width="1.5%" src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a><a href="https://www.facebook.com/profile.php?id=100026711422530&mibextid=LQQJ4d">
+        <img width="1.5%" src="https://cdn-icons-png.flaticon.com/512/145/145802.png"></a></footer>
 </body> 
 </html>
